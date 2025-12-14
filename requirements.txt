@@ -15,7 +15,7 @@ Werkzeug>=2.2.3
 itsdangerous>=2.1.2
 Jinja2>=3.1.2
 
-# ML - TensorFlow (optional, commenting out to fix build size and compatibility)
+# ML - TensorFlow (optional, commented out for deployment compatibility)
 # tensorflow-cpu==2.10.1
 
 # Extras
