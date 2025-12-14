@@ -1,0 +1,116 @@
+# VibeFlow Configuration - Breast Cancer Detection ML
+
+app:
+  name: "Breast Cancer Detection ML"
+  description: "Production-Grade ML System - 97.66% Accuracy Voting Ensemble"
+  version: "2.0.0"
+  author: "Aziz Messaoud"
+  license: "MIT"
+
+entry_point: ultimate_vibeflow_app.py
+
+functions:
+  - name: predict
+    description: "Single prediction from 30 tumor features"
+    type: "prediction"
+    input_type: "form"
+    tags: ["main", "production"]
+    
+  - name: batch_predict
+    description: "Batch predictions (CSV upload)"
+    type: "batch_processing"
+    input_type: "file"
+    tags: ["batch"]
+    
+  - name: get_metrics
+    description: "Get model performance metrics"
+    type: "info"
+    tags: ["analytics"]
+    
+  - name: compare_models
+    description: "Compare all 4 models (RF, SVM, GB, Voting)"
+    type: "comparison"
+    tags: ["analytics"]
+    
+  - name: get_dataset_info
+    description: "Dataset information"
+    type: "info"
+    tags: ["metadata"]
+    
+  - name: get_feature_names
+    description: "All 30 feature names"
+    type: "info"
+    tags: ["metadata"]
+
+backend:
+  type: "python"
+  python_version: "3.13"
+  requirements_file: "requirements.txt"
+
+database:
+  type: "postgresql"
+  auto_create: true
+  tables:
+    - predictions    # Store all predictions
+    - users          # User accounts
+    - api_logs       # API usage tracking
+
+api:
+  rate_limit: "1000/hour"
+  timeout: "30s"
+  authentication: "optional"
+  documentation_url: "/api/docs"
+  cors: true
+
+ui:
+  theme: "light"
+  layout: "tabbed"
+  sidebar: true
+  
+  tabs:
+    - name: "🔮 Predict"
+      description: "Make a single prediction"
+      function: "predict"
+      
+    - name: "📊 Compare Models"
+      description: "Compare all 4 models"
+      function: "compare_models"
+      
+    - name: "📈 Metrics"
+      description: "Model performance metrics"
+      function: "get_metrics"
+      
+    - name: "📁 Dataset"
+      description: "Dataset information"
+      function: "get_dataset_info"
+
+deployment:
+  auto_scaling:
+    enabled: true
+    min_replicas: 1
+    max_replicas: 10
+    target_cpu_usage: 70
+  
+  health_check:
+    enabled: true
+    interval: 30s
+    timeout: 10s
+  
+  environment:
+    LOG_LEVEL: "INFO"
+    DEBUG: false
+
+monitoring:
+  enabled: true
+  metrics:
+    - prediction_latency
+    - prediction_accuracy
+    - api_usage
+    - error_rate
+
+# Security
+security:
+  enabled: true
+  api_key_auth: true
+  rate_limiting: true
+  cors_origins: "*"
