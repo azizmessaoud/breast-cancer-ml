@@ -1,0 +1,4 @@
+{
+  "best_model": "neural_network",
+  "path": "breast-cancer-detection/models/neural_network.joblib"
+}

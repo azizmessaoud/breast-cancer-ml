@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prediction Results</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Prediction Results</h1>
+    {% if result %}
+      <p>Model: <strong>{{ result.model }}</strong></p>
+      <p>
+        Diagnosis:
+        {% if result.label == 1 %}
+          <span class="badge malignant">Malignant</span>
+        {% else %}
+          <span class="badge benign">Benign</span>
+        {% endif %}
+      </p>
+      <p>Confidence: {{ (result.confidence * 100) | round(2) if result.confidence is not none else 'N/A' }}%</p>
+      <h3>Submitted values</h3>
+      <ol>
+      {% for name, val in zip(feature_names, values) %}
+        <li>{{ name }}: {{ val }}</li>
+      {% endfor %}
+      </ol>
+      <p><a href="/">Back</a></p>
+    {% else %}
+      <p>No result.</p>
+      <p><a href="/">Back</a></p>
+    {% endif %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Collecting xgboost
+  Downloading xgboost-2.1.4-py3-none-manylinux2014_x86_64.whl (4.5 MB)
+Requirement already satisfied: scipy in ./venv/lib/python3.8/site-packages (from xgboost) (1.10.1)
+Requirement already satisfied: numpy in ./venv/lib/python3.8/site-packages (from xgboost) (1.24.4)
+Installing collected packages: xgboost
+Successfully installed xgboost-2.1.4

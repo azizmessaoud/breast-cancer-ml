@@ -1,0 +1,31 @@
+# Kaggle Notebook Template (copy into a Kaggle notebook and adjust dataset path)
+
+# %%writefile src/utils.py
+# (paste contents from your local src/utils.py)
+
+# %%writefile src/config.py
+# (paste contents from your local src/config.py)
+
+# %%writefile src/data_loader.py
+# (paste contents from your local src/data_loader.py)
+
+# %%writefile src/data_preprocessor.py
+# (paste contents from your local src/data_preprocessor.py)
+
+# %%writefile src/pipeline_model.py
+# (paste contents from your local src/pipeline_model.py)
+
+# %%writefile src/model_trainer.py
+# (paste contents from your local src/model_trainer.py)
+
+# %%writefile src/model_evaluator.py
+# (paste contents from your local src/model_evaluator.py)
+
+# %%writefile app.py
+# (paste contents from your local app.py)
+
+# %%writefile main.py
+# (paste contents from your local main.py)
+
+# Adjust data path for Kaggle
+# DATA_PATH = '../input/<dataset-name>/data.csv'

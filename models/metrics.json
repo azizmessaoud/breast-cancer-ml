@@ -1,0 +1,133 @@
+{
+  "random_forest": {
+    "params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "metrics": {
+      "accuracy": 0.9532163742690059,
+      "precision": 0.9666666666666667,
+      "recall": 0.90625,
+      "f1": 0.9354838709677419
+    },
+    "roc_auc": 0.9944509345794392,
+    "model_path": "breast-cancer-detection/models/random_forest.joblib",
+    "roc_curve_path": "breast-cancer-detection/models/random_forest_roc_curve.png"
+  },
+  "svm": {
+    "params": {
+      "C": 1.0,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": "auto",
+      "kernel": "rbf",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "metrics": {
+      "accuracy": 0.9707602339181286,
+      "precision": 1.0,
+      "recall": 0.921875,
+      "f1": 0.959349593495935
+    },
+    "roc_auc": 0.9948160046728971,
+    "model_path": "breast-cancer-detection/models/svm.joblib",
+    "roc_curve_path": "breast-cancer-detection/models/svm_roc_curve.png"
+  },
+  "neural_network": {
+    "params": {
+      "activation": "relu",
+      "alpha": 0.0001,
+      "batch_size": "auto",
+      "beta_1": 0.9,
+      "beta_2": 0.999,
+      "early_stopping": false,
+      "epsilon": 1e-08,
+      "hidden_layer_sizes": [
+        64
+      ],
+      "learning_rate": "adaptive",
+      "learning_rate_init": 0.001,
+      "max_fun": 15000,
+      "max_iter": 500,
+      "momentum": 0.9,
+      "n_iter_no_change": 10,
+      "nesterovs_momentum": true,
+      "power_t": 0.5,
+      "random_state": 42,
+      "shuffle": true,
+      "solver": "adam",
+      "tol": 0.0001,
+      "validation_fraction": 0.1,
+      "verbose": false,
+      "warm_start": false
+    },
+    "metrics": {
+      "accuracy": 0.9766081871345029,
+      "precision": 1.0,
+      "recall": 0.9375,
+      "f1": 0.967741935483871
+    },
+    "roc_auc": 0.9878796728971962,
+    "model_path": "breast-cancer-detection/models/neural_network.joblib",
+    "roc_curve_path": "breast-cancer-detection/models/neural_network_roc_curve.png"
+  },
+  "gradient_boosting": {
+    "params": {
+      "ccp_alpha": 0.0,
+      "criterion": "friedman_mse",
+      "init": null,
+      "learning_rate": 0.1,
+      "loss": "log_loss",
+      "max_depth": 3,
+      "max_features": null,
+      "max_leaf_nodes": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 200,
+      "n_iter_no_change": null,
+      "random_state": 42,
+      "subsample": 1.0,
+      "tol": 0.0001,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "metrics": {
+      "accuracy": 0.9649122807017544,
+      "precision": 1.0,
+      "recall": 0.90625,
+      "f1": 0.9508196721311475
+    },
+    "roc_auc": 0.9973714953271028,
+    "model_path": "breast-cancer-detection/models/gradient_boosting.joblib",
+    "roc_curve_path": "breast-cancer-detection/models/gradient_boosting_roc_curve.png"
+  }
+}
