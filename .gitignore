@@ -1,3 +1,40 @@
-venv/
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Data
+*.csv
+data/
+
+# Models
+models/
+*.pkl
+*.joblib
+
+# Logs
+*.log
+logs/
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+htmlcov/
+
+# Build
+build/
+dist/
+*.egg-info/
