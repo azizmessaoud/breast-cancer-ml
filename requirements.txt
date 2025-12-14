@@ -1,22 +1,23 @@
 # Core
-numpy==1.24.4
-pandas==1.5.3
-scikit-learn==1.2.2
-scipy==1.10.1
-joblib==1.2.0
+numpy>=1.24.4
+pandas>=1.5.3
+scikit-learn>=1.2.2
+scipy>=1.10.1
+joblib>=1.2.0
 
 # Visualization
-matplotlib==3.7.2
-seaborn==0.12.2
+matplotlib>=3.7.2
+seaborn>=0.12.2
 
 # Web API
-Flask==2.2.5
-Werkzeug==2.2.3
-itsdangerous==2.1.2
-Jinja2==3.1.2
+Flask>=2.2.5
+Werkzeug>=2.2.3
+itsdangerous>=2.1.2
+Jinja2>=3.1.2
 
-# ML - TensorFlow CPU (optional; fallback to sklearn MLP if unavailable)
-tensorflow-cpu==2.10.1
+# ML - TensorFlow (optional, commenting out to fix build size and compatibility)
+# tensorflow-cpu==2.10.1
 
 # Extras
-typing-extensions==4.7.1
+typing-extensions>=4.7.1
+streamlit>=1.31.0
